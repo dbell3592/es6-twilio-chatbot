@@ -18,7 +18,7 @@ export default class Game{
                 break;
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
-                    sReply = "Great my favourite game ... Here's the stick back. Do you throw it again?"
+                    sReply = "Great my favourite game ... Here's the stick back. Do you throw it again???"
                     this.stateCur = GameState.PLAY;
                 }else{
                     sReply = "Walking is my favourite. Oh look a stick! Do you play or keep on walking?";
