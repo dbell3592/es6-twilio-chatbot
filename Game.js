@@ -11,7 +11,7 @@ export default class Game{
     
     makeAMove(sInput)
     {
-        let sReply = "Hi I'm spot (a dog). Oh look a stick. Do you play or keep on walking?";
+        let sReply = "Hi I'm spot (a dog).  look a stick. Do you play or keep on walking?";
         switch(this.stateCur){
             case GameState.WELCOMING:
                 this.stateCur = GameState.STICK;
