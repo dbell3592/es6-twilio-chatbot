@@ -59,7 +59,7 @@ export default class Game{
                     sReply = "well id hope so dogs are the coolest like how many animals do you know that have 4 legs? not many.. do you play guitar?:o ";
                     this.stateCur = GameState.QUESTION2;
                 }else{
-                    sReply = "well i mean....nobodies perfect..maybe just humor me and type dogs";
+                    sReply = "well i mean....nobodies perfect..maybe just humor me and pick dogs";
                 }
                 break;
 
@@ -72,15 +72,25 @@ export default class Game{
                 }
                 break;
 
-             case GameState.QUESTION4:
+             case GameState.QUESTION3:
                 if(sInput.toLowerCase().match("no")){
-                    sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) ";
+                    sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) POP QUIZ: 1+1? ";
                     this.stateCur = GameState.QUESTION4;
                 }else{
-                    sReply = "well i mean....nobodies perfect..maybe just humor me and type yes";
+                    sReply = "you are bad at this..no offence :s";
                 }
                 break;
     
+                case GameState.QUESTION4:
+                if(sInput.toLowerCase().match("2")){
+                    sReply = "WHOA....you smart cookie you..im proud of you sweetheart<3 now for a hard question....   ";
+                    this.stateCur = GameState.QUESTION5;
+                }else{
+                    sReply = "that...is..embarrasing try again i know you can do it i believe in you";
+                }
+                break;
+
+
         }
         return(sReply);
     }
