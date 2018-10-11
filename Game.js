@@ -2,7 +2,7 @@ const GameState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     STICK:  Symbol("stick"),
     PLAY: Symbol("play"),
-    QUESTION1: Symbol("yes")
+    QUESTION1: Symbol("yes"),
 });
 
 export default class Game{
@@ -43,7 +43,7 @@ export default class Game{
                     sReply = "well i mean....nobodies perfect..(";
                     this.stateCur = GameState.QUESTION1;
                 }
-    
+                break;
     
         }
         return(sReply);
