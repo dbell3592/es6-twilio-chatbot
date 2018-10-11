@@ -1,8 +1,8 @@
 const GameState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     STICK:  Symbol("stick"),
-    PLAY: Symbol("play")
-    
+    PLAY: Symbol("play"),
+    QUESTION1: Symbol("yes")
 });
 
 export default class Game{
@@ -30,19 +30,17 @@ export default class Game{
                     sReply = "your my best friend now lets begin! do you like dogs ";
                 }else{
                     sReply = "aw cmon dont be like that say yes ...please:(";
+                    this.stateCur = GameState.QUESTION1;
+                }
+                break;
+             case GameState.QUESTION1:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "okay next question: do you play guitar?";
+                }else{
+                    sReply = "aw cmon dont be like that say yes ...please:(";
                     this.stateCur = GameState.STICK;
                 }
                 break;
-            case GameState.STICK:
-                if(sInput.toLowerCase().match("yes")){
-                    sReply = "i do too they are aweeeesooooome";
-                }else{
-                    sReply = "well i mean nobodies perfect you should say yes ";
-                    this.stateCur = GameState.PLAY;
-                }
-                break;
-
-
 
         }
         return(sReply);
