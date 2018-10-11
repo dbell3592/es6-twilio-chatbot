@@ -36,7 +36,7 @@ export default class Game{
                 if(sInput.toLowerCase().match("male")){
                     sReply = "cool cool you are male...males are cool ";
                 }else{
-                    sReply = "aw cmon dont be like that press play to begin!...please:(";
+                    sReply = "ah female..yea thats cool too!";
                     this.stateCur = GameState.STICK;
                 }
                 break;
