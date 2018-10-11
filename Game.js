@@ -33,7 +33,7 @@ export default class Game{
                     this.stateCur = GameState.STICK;
                 }
                 break;
-            case GameState.PLAY:
+            case GameState.STICK:
                 if(sInput.toLowerCase().match("yes")){
                     sReply = "i do too they are aweeeesooooome";
                 }else{
