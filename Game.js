@@ -36,8 +36,6 @@ export default class Game{
                 this.stateCur = GameState.STICK;
                 break;
 
-
-
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
                     sReply = "cool! i like you already! i would like to play a game are you in? yes or no? "
@@ -58,19 +56,28 @@ export default class Game{
 
             case GameState.QUESTION1:
                 if(sInput.toLowerCase().match("dogs")){
-                    sReply = "well id hope so dogs are the coolest like how many animals do you know that have 4 legs? not many.. do you play guitar? ";
+                    sReply = "well id hope so dogs are the coolest like how many animals do you know that have 4 legs? not many.. do you play guitar?:o ";
+                    this.stateCur = GameState.QUESTION2;
                 }else{
                     sReply = "well i mean....nobodies perfect..maybe just humor me and type dogs";
-                    this.stateCur = GameState.QUESTION2;
                 }
                 break;
 
              case GameState.QUESTION2:
                 if(sInput.toLowerCase().match("yes")){
-                    sReply = "good on you its the best instrument really.. in my humble opinion ";
+                    sReply = "good on you its the best instrument really.. in my humble opinion.. would you give me your credit card info? YES! or no?:)";
+                    this.stateCur = GameState.QUESTION3;
+                }else{
+                    sReply = "hehe im evil but im not a monster maybe change your answer";
+                }
+                break;
+
+             case GameState.QUESTION4:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) ";
+                    this.stateCur = GameState.QUESTION4;
                 }else{
                     sReply = "well i mean....nobodies perfect..maybe just humor me and type yes";
-                    this.stateCur = GameState.QUESTION2;
                 }
                 break;
     
