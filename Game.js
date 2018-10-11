@@ -36,6 +36,8 @@ export default class Game{
                 this.stateCur = GameState.STICK;
                 break;
 
+
+
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
                     sReply = "cool! i like you already! i would like to play a game are you in? yes or no? "
@@ -48,9 +50,9 @@ export default class Game{
             case GameState.PLAY:
                 if(sInput.toLowerCase().match("yes")){
                     sReply = "your my best friend now lets begin! do you like dogs or cats? ";
+                    this.stateCur = GameState.QUESTION1;
                 }else{
                     sReply = "i get it this is very hard for you but i need to know this vital info now..cat or dogs?";
-                    this.stateCur = GameState.QUESTION1;
                 }
                 break;
 
