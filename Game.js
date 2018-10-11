@@ -11,7 +11,7 @@ export default class Game{
     
     makeAMove(sInput)
     {
-        let sReply = "hello world!!!!";
+        let sReply = "welcome to this supper epic awesome application type 'play' to begin!";
         switch(this.stateCur){
             case GameState.WELCOMING:
                 this.stateCur = GameState.STICK;
