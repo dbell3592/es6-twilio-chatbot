@@ -11,17 +11,17 @@ export default class Game{
     
     makeAMove(sInput)
     {
-        let sReply = "welcome to this supper epic awesome application type 'play' to begin!";
+        let sReply = "welcome to this super epic awesome application type 'play' to begin!:D";
         switch(this.stateCur){
             case GameState.WELCOMING:
                 this.stateCur = GameState.STICK;
                 break;
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
-                    sReply = "Great my favourite game ... Here's the stick back. Do you throw it again?"
+                    sReply = "cool i like you already i would like to play a game are you in? yes or no?:D"
                     this.stateCur = GameState.PLAY;
                 }else{
-                    sReply = "Walking is my favourite. Oh look a stick! Do you play or keep on walking?";
+                    sReply = "you should really type play it will be fun i promise;)";
                 }
                 break;
             case GameState.PLAY:
@@ -32,6 +32,11 @@ export default class Game{
                     this.stateCur = GameState.STICK;
                 }
                 break;
+
+
+
+
+
         }
         return(sReply);
     }
