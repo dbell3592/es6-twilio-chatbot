@@ -17,7 +17,7 @@ export default class Game{
                 this.stateCur = GameState.STICK;
                 break;
             case GameState.STICK:
-                if(sInput.toLowerCase().match("yes")){
+                if(sInput.toLowerCase().match("play")){
                     sReply = "cool i like you already i would like to play a game are you in? yes or no?:D"
                     this.stateCur = GameState.PLAY;
                 }else{
