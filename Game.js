@@ -2,24 +2,24 @@ const GameState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     STICK:  Symbol("stick"),
     PLAY: Symbol("play"),
-    QUESTION1: Symbol("dogs"),
-    QUESTION2: Symbol("guitar"),
-    QUESTION3: Symbol("xbox"),
-    QUESTION4: Symbol("yes"),
-    QUESTION5: Symbol("dogs"),
-    QUESTION6: Symbol("dogs"),
-    QUESTION7: Symbol("dogs"),
-    QUESTION8: Symbol("dogs"),
-    QUESTION9: Symbol("dogs"),
-    QUESTION10: Symbol("dogs"),
-    QUESTION11: Symbol("dogs"),
-    QUESTION11: Symbol("dogs"),
-    QUESTION12: Symbol("dogs"),
-    QUESTION13: Symbol("dogs"),
-    QUESTION14: Symbol("dogs"),
-    QUESTION15: Symbol("dogs"),
-    QUESTION16: Symbol("dogs"),
-    QUESTION17: Symbol("dogs"),
+    QUESTION1: Symbol("QUESTION1"),
+    QUESTION2: Symbol("QUESTION2"),
+    QUESTION3: Symbol("QUESTION3"),
+    QUESTION4: Symbol("QUESTION4"),
+    QUESTION5: Symbol("QUESTION5"),
+    QUESTION6: Symbol("QUESTION6"),
+    QUESTION7: Symbol("QUESTION7"),
+    QUESTION8: Symbol("QUESTION8"),
+    QUESTION9: Symbol("QUESTION9"),
+    QUESTION10: Symbol("QUESTION10"),
+    QUESTION11: Symbol("QUESTION11"),
+    QUESTION12: Symbol("QUESTION12"),
+    QUESTION13: Symbol("QUESTION13"),
+    QUESTION14: Symbol("QUESTION14"),
+    QUESTION15: Symbol("QUESTION15"),
+    QUESTION16: Symbol("QUESTION16"),
+    QUESTION17: Symbol("QUESTION17"),
+    QUESTION18: Symbol("QUESTION18"),
    
 });
 
@@ -77,16 +77,43 @@ export default class Game{
                     sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) POP QUIZ: 1+1? ";
                     this.stateCur = GameState.QUESTION4;
                 }else{
-                    sReply = "you are bad at this..no offence :s";
+                    sReply = "you are bad at this..no offence :s try again i know you can do it!";
                 }
                 break;
     
-                case GameState.QUESTION4:
+            case GameState.QUESTION4:
                 if(sInput.toLowerCase().match("2")){
-                    sReply = "WHOA....you smart cookie you..im proud of you sweetheart<3 now for a hard question....   ";
+                    sReply = "WHOA....you smart cookie you..im proud of you sweetheart<3 now for a hard question....can you grow a beard on your foot?";
                     this.stateCur = GameState.QUESTION5;
                 }else{
-                    sReply = "that...is..embarrasing try again i know you can do it i believe in you";
+                    sReply = "just answer the entirley nessesary question i believe in you.";
+                }
+                break;
+
+            case GameState.QUESTION5:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "haha yea...i know..ha..ha...what?..dont look at me like that...uh..okay uhh... is lasagna a japanese dish? im asking for a friend..";
+                    this.stateCur = GameState.QUESTION6;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION6:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION7;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION7:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION8;
+                }else{
+                    sReply = "think....use the force..";
                 }
                 break;
 
