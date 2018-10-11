@@ -2,7 +2,7 @@ const GameState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     STICK:  Symbol("stick"),
     PLAY: Symbol("play"),
-    QUESTION1: Symbol("yes"),
+    QUESTION1: Symbol("dogs"),
 });
 
 export default class Game{
@@ -31,7 +31,7 @@ export default class Game{
                 if(sInput.toLowerCase().match("yes")){
                     sReply = "your my best friend now lets begin! do you like dogs or cats? ";
                 }else{
-                    sReply = "i get it this is very hard for youbut i need toknow this vitalinfo now..cat or dog?";
+                    sReply = "i get it this is very hard for youbut i need toknow this vitalinfo now..cat or dogs?";
                     this.stateCur = GameState.QUESTION1;
                 }
                 break;
