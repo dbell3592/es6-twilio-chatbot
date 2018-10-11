@@ -74,7 +74,7 @@ export default class Game{
 
              case GameState.QUESTION3:
                 if(sInput.toLowerCase().match("no")){
-                    sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) POP QUIZ: 1+1? ";
+                    sReply = "damit i really thought that would work...then again robots arnt perfect...yet;) POP QUIZ: 1+1? id suggest using text as the creator tried a number and it failed miserably..";
                     this.stateCur = GameState.QUESTION4;
                 }else{
                     sReply = "you are bad at this..no offence :s try again i know you can do it!";
@@ -82,7 +82,7 @@ export default class Game{
                 break;
     
             case GameState.QUESTION4:
-                if(sInput.toLowerCase().match("2")){
+                if(sInput.toLowerCase().match("two")){
                     sReply = "WHOA....you smart cookie you..im proud of you sweetheart<3 now for a hard question....can you grow a beard on your foot?";
                     this.stateCur = GameState.QUESTION5;
                 }else{
