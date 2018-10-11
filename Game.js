@@ -25,10 +25,10 @@ export default class Game{
                 }
                 break;
             case GameState.PLAY:
-                if(sInput.toLowerCase().match("yes")){
-                    sReply = "Here it is! I got it for you. Do you toss it again.... Please? ";
+                if(sInput.toLowerCase().match("male")){
+                    sReply = "your my best friend now lets begin! are you male or female ";
                 }else{
-                    sReply = "Walking is my favourite. Oh look a stick! Do you play or keep on walking?";
+                    sReply = "aw cmon dont be like that press play to begin!...please:(";
                     this.stateCur = GameState.STICK;
                 }
                 break;
