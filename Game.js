@@ -33,7 +33,14 @@ export default class Game{
                     this.stateCur = GameState.STICK;
                 }
                 break;
-            
+            case GameState.PLAY:
+                if(sInput.toLowerCase().match("male")){
+                    sReply = "cool you are male next question are you a  ";
+                }else{
+                    sReply = "aw cmon dont be like that say yes to begin!...please:(";
+                    this.stateCur = GameState.PLAY;
+                }
+                break;
 
 
 
