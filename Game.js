@@ -9,7 +9,7 @@ export default class Game{
     constructor(){
         this.stateCur = GameState.WELCOMING;
     }
-    
+
     makeAMove(sInput)
     {
         let sReply = "welcome to this super epic awesome application type 'play' to begin!:D";
@@ -27,17 +27,17 @@ export default class Game{
                 break;
             case GameState.PLAY:
                 if(sInput.toLowerCase().match("yes")){
-                    sReply = "your my best friend now lets begin! are you male or female ";
+                    sReply = "your my best friend now lets begin! do you like dogs ";
                 }else{
-                    sReply = "aw cmon dont be like that say yes to begin!...please:(";
+                    sReply = "aw cmon dont be like that say yes ...please:(";
                     this.stateCur = GameState.STICK;
                 }
                 break;
             case GameState.PLAY:
-                if(sInput.toLowerCase().match("male")){
-                    sReply = "cool you are male next question are you a  ";
+                if(sInput.toLowerCase().match("yes")){
+                    sReply = "i do too they are aweeeesooooome";
                 }else{
-                    sReply = "aw cmon dont be like that say yes to begin!...please:(";
+                    sReply = "well i mean nobodies perfect you should say yes ";
                     this.stateCur = GameState.PLAY;
                 }
                 break;
