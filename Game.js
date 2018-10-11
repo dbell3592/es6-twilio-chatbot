@@ -2,6 +2,7 @@ const GameState = Object.freeze({
     WELCOMING:   Symbol("welcoming"),
     STICK:  Symbol("stick"),
     PLAY: Symbol("play")
+
 });
 
 export default class Game{
@@ -32,7 +33,14 @@ export default class Game{
                     this.stateCur = GameState.STICK;
                 }
                 break;
-           
+                case GameState.PLAY:
+                if(sInput.toLowerCase().match("male")){
+                    sReply = "okay cool cool males are cool very cool..too much cool? oh well  ";
+                }else{
+                    sReply = "ah female cool cool females are cool...too much cool? oh well(";
+                    this.stateCur = GameState.STICK;
+                }
+                break;
 
 
 
