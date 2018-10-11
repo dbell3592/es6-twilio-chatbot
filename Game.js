@@ -18,7 +18,7 @@ export default class Game{
                 break;
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
-                    sReply = "cool i like you already i would like to play a game are you in? yes or no? "
+                    sReply = "cool! i like you already! i would like to play a game are you in? yes or no? "
                     this.stateCur = GameState.PLAY;
                 }else{
                     sReply = "you should really press play it will be fun i promise;)";
@@ -28,11 +28,18 @@ export default class Game{
                 if(sInput.toLowerCase().match("yes")){
                     sReply = "your my best friend now lets begin! are you male or female ";
                 }else{
+                    sReply = "aw cmon dont be like that say yes to begin!...please:(";
+                    this.stateCur = GameState.STICK;
+                }
+                break;
+            case GameState.PLAY:
+                if(sInput.toLowerCase().match("male")){
+                    sReply = "cool cool you are male...males are cool ";
+                }else{
                     sReply = "aw cmon dont be like that press play to begin!...please:(";
                     this.stateCur = GameState.STICK;
                 }
                 break;
-
 
 
 
