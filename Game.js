@@ -29,18 +29,18 @@ export default class Game{
 
             case GameState.PLAY:
                 if(sInput.toLowerCase().match("yes")){
-                    sReply = "your my best friend now lets begin! do you like dogs ";
+                    sReply = "your my best friend now lets begin! do you like dogs or cats? ";
                 }else{
-                    sReply = "aw cmon dont be like that say yes ...please:(";
+                    sReply = "i get it this is very hard for youbut i need toknow this vitalinfo now..cat or dog?";
                     this.stateCur = GameState.QUESTION1;
                 }
                 break;
 
             case GameState.QUESTION1:
-                if(sInput.toLowerCase().match("yes")){
+                if(sInput.toLowerCase().match("dogs")){
                     sReply = "well id hope so dogs are the coolest like how many animals do you know that have 4 legs? not many.. do you play guitar? ";
                 }else{
-                    sReply = "well i mean....nobodies perfect..(";
+                    sReply = "well i mean....nobodies perfect..maybe just humor me and type dogs";
                     this.stateCur = GameState.QUESTION1;
                 }
                 break;
