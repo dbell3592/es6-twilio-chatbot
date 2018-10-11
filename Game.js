@@ -17,6 +17,7 @@ export default class Game{
             case GameState.WELCOMING:
                 this.stateCur = GameState.STICK;
                 break;
+
             case GameState.STICK:
                 if(sInput.toLowerCase().match("play")){
                     sReply = "cool! i like you already! i would like to play a game are you in? yes or no? "
@@ -25,6 +26,7 @@ export default class Game{
                     sReply = "you should really press play it will be fun i promise;)";
                 }
                 break;
+
             case GameState.PLAY:
                 if(sInput.toLowerCase().match("yes")){
                     sReply = "your my best friend now lets begin! do you like dogs ";
@@ -33,15 +35,16 @@ export default class Game{
                     this.stateCur = GameState.QUESTION1;
                 }
                 break;
-             case GameState.QUESTION1:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "okay next question: do you play guitar?";
-                }else{
-                    sReply = "aw cmon dont be like that say yes ...please:(";
-                    this.stateCur = GameState.STICK;
-                }
-                break;
 
+            case GameState.QUESTION1:
+                if(sInput.toLowerCase().match("yes")){
+                    sReply = "well id hope so dogs are the coolest like how many animals do you know that have 4 legs? not many.. do you play guitar? ";
+                }else{
+                    sReply = "well i mean....nobodies perfect..(";
+                    this.stateCur = GameState.QUESTION1;
+                }
+    
+    
         }
         return(sReply);
     }
