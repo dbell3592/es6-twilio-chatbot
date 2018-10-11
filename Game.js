@@ -104,7 +104,7 @@ export default class Game{
                     sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
                     this.stateCur = GameState.QUESTION7;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "are you sure? i dont think you are..";
                 }
                 break;
 
