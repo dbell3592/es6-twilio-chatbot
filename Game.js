@@ -25,7 +25,7 @@ export default class Game{
                 }
                 break;
             case GameState.PLAY:
-                if(sInput.toLowerCase().match("male")){
+                if(sInput.toLowerCase().match("yes")){
                     sReply = "your my best friend now lets begin! are you male or female ";
                 }else{
                     sReply = "aw cmon dont be like that press play to begin!...please:(";
