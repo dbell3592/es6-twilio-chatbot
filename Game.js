@@ -101,17 +101,134 @@ export default class Game{
 
             case GameState.QUESTION6:
                 if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA! would you like a cookie?";
                     this.stateCur = GameState.QUESTION7;
+                }else{
+                    sReply = "this is what i get for trying to be nice:( offers still on the table..";
+                }
+                break;
+
+            case GameState.QUESTION7:
+                if(sInput.toLowerCase().match("yes")){
+                    sReply = "just kidding i dont have one silly goose im a computer..why would you accept a cookie from a stranger anyways..better yet a computer beter better yet a computer stranger..so many questions..oh well moving on..! what colour is the sky?";
+                    this.stateCur = GameState.QUESTION8;
+                }else{
+                    sReply = "ill give you a hint it starts with a b....weirdo.";
+                }
+                break;
+
+             case GameState.QUESTION8:
+                if(sInput.toLowerCase().match("blue")){
+                    sReply = "huh..interesting i dont actually know as all i do sit on this desk..alone..:( all you humans do is push my buttons >:( anyways enough about me hows your day going?";
+                    this.stateCur = GameState.QUESTION9;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION9:
+                if(sInput.toLowerCase().match("good")){
+                    sReply = "thats good im glad one of us is having fun...ahem..totally joking..";
+                    this.stateCur = GameState.QUESTION10;
                 }else{
                     sReply = "are you sure? i dont think you are..";
                 }
                 break;
 
-            case GameState.QUESTION7:
+            case GameState.QUESTION10:
                 if(sInput.toLowerCase().match("no")){
                     sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
-                    this.stateCur = GameState.QUESTION8;
+                    this.stateCur = GameState.QUESTION11;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+             case GameState.QUESTION9:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION10;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+             case GameState.QUESTION10:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION11;
+                }else{
+                    sReply = "are you sure? i dont think you are..";
+                }
+                break;
+
+            case GameState.QUESTION11:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION12;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION12:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION13;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION13:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION14;
+                }else{
+                    sReply = "are you sure? i dont think you are..";
+                }
+                break;
+
+            case GameState.QUESTION14:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION15;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+             case GameState.QUESTION15:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION16;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+             case GameState.QUESTION16:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION17;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+             case GameState.QUESTION17:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.QUESTION18;
+                }else{
+                    sReply = "think....use the force..";
+                }
+                break;
+
+            case GameState.QUESTION18:
+                if(sInput.toLowerCase().match("no")){
+                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    this.stateCur = GameState.WELCOMING;
                 }else{
                     sReply = "think....use the force..";
                 }
