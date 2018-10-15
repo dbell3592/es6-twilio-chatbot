@@ -146,77 +146,78 @@ export default class Game{
 
              case GameState.QUESTION11:
                 if(sInput.toLowerCase().match("music")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                    sReply = "now that thats out of the way what would you rate this application out of 10?";
                     this.stateCur = GameState.QUESTION12;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "everyones entitled to their own opinion..however your opinion is wrong..just say 10 and call it a day:)";
                 }
                 break;
 
              case GameState.QUESTION12:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("10")){
+                    sReply = "your too kind dear friend..now how about a game..rock paper scissors i choose rock what do you choose? prepare to loose";
                     this.stateCur = GameState.QUESTION13;
                 }else{
-                    sReply = "are you sure? i dont think you are..";
+                    sReply = "hah i win..you suck humans are so silly try again  ";
                 }
                 break;
 
              case GameState.QUESTION13:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("paper")){
+                    sReply = "wait WHAT...huh..this cant b-..ohhhhh..im bad at this..whats the polices phone number";
                     this.stateCur = GameState.QUESTION14;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "uhhh i reall hope you dont get into an emergancy..you might be doomed.. try again..";
                 }
                 break;
 
              case GameState.QUESTION14:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("911")){
+                    sReply = "police emergancy serivces what seems to be the problem?...hello? *phone hangs up* haha gotcha! now what colour are bananas?";
                     this.stateCur = GameState.QUESTION15;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "im kidding dont call the police u silly goose you. or do..i dare ya";
                 }
                 break;
 
              case GameState.QUESTION15:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("yellow")){
+                    sReply = "im glad your knowlage of bananas is on par! now im seriously running out of things to say but there needs to be 20 gamestates so uhh what colour issss.....the colour of a pear?";
                     this.stateCur = GameState.QUESTION16;
                 }else{
-                    sReply = "are you sure? i dont think you are..";
+                    sReply = "huh...uh..no?";
                 }
                 break;
 
              case GameState.QUESTION16:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("green")){
+                    sReply = "your knowlage of produce colours is impressive to say the least orange you glad you are as smart as you are?";
                     this.stateCur = GameState.QUESTION17;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "think....use the force..again or maybe your colour blind? i cant accept grey as an answer try green";
                 }
                 break;
 
              case GameState.QUESTION17:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                if(sInput.toLowerCase().match("yes")){
+                    sReply = "thats good i want whats best for you;) before i go i have one more question are you ready?";
                     this.stateCur = GameState.QUESTION18;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "dont be so hard on yourself say yes so i can end this on a positive note.";
                 }
                 break;
 
-
-            case GameState.QUESTION18:
-                if(sInput.toLowerCase().match("no")){
-                    sReply = "wait WHAT...huh..this cant b-..i mean yes i knew that im a robot im smarter..HA!";
+                case GameState.QUESTION18:
+                if(sInput.toLowerCase().match("yes")){
+                    sReply = "ill be honest i cant remember what the question was so maybe ill just leave before things get awkward..also the poice are en route you really shouldnt prank call the police>:)";
                     this.stateCur = GameState.WELCOMING;
                 }else{
-                    sReply = "think....use the force..";
+                    sReply = "wow man weve come so far and you cant even prepare yourself for my very important question im dissapointed in you my young padwan.";
                 }
                 break;
 
+
+           
 
         }
         return(sReply);
